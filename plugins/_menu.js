@@ -33,7 +33,7 @@ const database_info = (() => {
 astro_patch.smd({
   'cmdname': "menu",
   'desc': "Help list",
-  'react': '🍁',
+  'react': '🧸',
   'desc': "To show all available commands.",
   'type': 'user',
   'filename': __filename
@@ -48,13 +48,13 @@ astro_patch.smd({
     let greeting = "";
 
     if (hours >= 5 && hours < 12) {
-      greeting = "Good day!";
+      greeting = "Good mornin 🌞🌄🌅!";
     } else if (hours >= 12 && hours < 18) {
-      greeting = "Good day!";
+      greeting = "Good day 🌞🌇☀️!";
     } else if (hours >= 18 && hours < 22) {
-      greeting = "Good Evening!";
+      greeting = "Good Evenin 🌝🌃!";
     } else {
-      greeting = "Good evening!";
+      greeting = "Good night 🌝🌃";
     }
 
     const commandCategories = {};
@@ -68,29 +68,29 @@ astro_patch.smd({
     });
 
     // Set the desired menu design
-    const header = "┏━━👉 *" + Config.botname + "* 👈━━✿︎\n";
+    const header = "┏━━メ *" + Config.botname + "* メ━━✿︎\n";
     const lineSeparator = "┃ ";
-    const commandPrefix = "┏━━👉";
-    const commandSuffix = "👈━━✿︎";
+    const commandPrefix = "┏━━❤️";
+    const commandSuffix = "❤️━━✿︎";
     const footer = "┗━━━━━━━━━━━━━━✿︎";
 
     let menuContent = header;
-    menuContent += lineSeparator + "🍀 *𝙾𝚆𝙽𝙴𝚁 𝙽𝙰𝙼𝙴:* " + Config.ownername + "\n";
-    menuContent += lineSeparator + "🍀 *𝚄𝙿𝚃𝙸𝙼𝙴:* " + runtime(process.uptime()) + "\n";
-    menuContent += lineSeparator + "🍀 *𝚁𝙰𝙼 𝚄𝚂𝙴:* " + formatp(os.totalmem() - os.freemem()) + "\n";
-    menuContent += lineSeparator + "🍀 *𝙳𝙰𝚃𝙴:* " + currentDate + "\n";
-    menuContent += lineSeparator + "🍀 *𝙱𝙾𝚃 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂:* " + commands.length + "\n";
+    menuContent += lineSeparator + "🧸 *𝙾𝚆𝙽𝙴𝚁 𝙽𝙰𝙼𝙴:* " + Config.ownername + "\n";
+    menuContent += lineSeparator + "❤️ *𝚄𝙿𝚃𝙸𝙼𝙴:* " + runtime(process.uptime()) + "\n";
+    menuContent += lineSeparator + "❄️ *𝚁𝙰𝙼 𝚄𝚂𝙴:* " + formatp(os.totalmem() - os.freemem()) + "\n";
+    menuContent += lineSeparator + "🥺 *𝙳𝙰𝚃𝙴:* " + currentDate + "\n";
+    menuContent += lineSeparator + "🌍 *𝙱𝙾𝚃 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂:* " + commands.length + "\n";
     menuContent += lineSeparator + greeting + "\n";
 
     // List commands by category
     for (const category in commandCategories) {
       menuContent += commandPrefix + " *" + tiny(category) + "* " + commandSuffix + "\n";
       commandCategories[category].forEach(cmd => {
-        menuContent += "┃   🍀 " + fancytext(cmd, 1) + "\n";
+        menuContent += "┃   🧸 " + fancytext(cmd, 1) + "\n";
       });
     }
     
-    menuContent += footer + "\n\n𝙼𝙰𝙳𝙴 𝚆𝙸𝚃𝙷 𝙻𝙾𝚅𝙴 *" + Config.botname + "*!\n©𝙷𝙰𝙺𝙸\n" + readmore;
+    menuContent += footer + "\n\n𝙼𝙰𝙳𝙴 𝚆𝙸𝚃𝙷 𝙻𝙾𝚅𝙴 *" + Config.botname + "*!\n©cylee\n" + readmore;
 
     const response = {
       'caption': menuContent,
