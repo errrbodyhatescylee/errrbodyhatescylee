@@ -4,7 +4,7 @@ const { runtime } = require("../lib"); // Assuming you have a runtime function f
 smd(
   {
     pattern: "ping", 
-    react: "⏳️", 
+    react: "⚡", 
     desc: "Check the bot's latency and uptime", 
     category: "misc",
     filename: __filename,
@@ -29,7 +29,7 @@ smd(
 *Uptime:* ${uptime}
 
 
-== |🍀|Powered By Haki|🍀| ==
+== |❤️|Powered By Chucky 2.0|🧸| ==
     `;
 
     // Send the final message directly
