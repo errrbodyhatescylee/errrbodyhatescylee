@@ -5,7 +5,7 @@ const { cmd } = require("../lib/plugins");
 let mtypes = ["imageMessage"];
 smd(
   {
-    pattern: "pp",
+    pattern: "setpp",
     desc: "Set profile picture",
     category: "whatsapp",
     use: "<reply to image>",
@@ -33,7 +33,7 @@ smd(
 );
 smd(
   {
-    pattern: "fullpp",
+    pattern: "setfullpp",
     desc: "Set full screen profile picture",
     category: "whatsapp",
     use: "<reply to image>",
