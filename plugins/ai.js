@@ -25,7 +25,7 @@ smd(
       }
 
       // Send a loading message
-      await m.send("NIKKA is thinking 🤔");
+      await m.send("hold on, Chucky still thinkin abou what to say to your dumbass ❄️❤️🧸");
 
       // Define the API URL
       const apiUrl = `https://api-gifted-tech.onrender.com/api/ai/gpt4?q=${encodeURIComponent(query)}&apikey=gifteddevskk`;
